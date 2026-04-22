@@ -61,16 +61,21 @@ Jika ingin menjalankan proyek ini di komputer kamu:
 ## 📝 Lisensi
 Proyek ini menggunakan lisensi **MIT**. Kamu bebas menyalin, memodifikasi, dan menggunakan kembali kode ini untuk keperluan edukasi atau pribadi.
 ## 👤 Penyusun
-**Farid Alfiyansah**
- * **Kelas:** XI TJKT 2
- * **GitHub:** @R1dzzz
- * **Project:** Tugas Eksplorasi Aplikasi Berbasis AI
-<p align="left">
+​<p align="center">
 <a href="https://github.com/R1dzzz">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Follow-R1dzzz-black%3Fstyle%3Dflat-square%26logo%3Dgithub" alt="Follow GitHub">
+<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3DR1dzzz%26show_icons%3Dtrue%26theme%3Ddark" alt="Statistik GitHub Farid Alfiyansah" />
 </a>
 </p>
-<p align="center">
+​Nama: Farid Alfiyansah
+​Kelas: XI TJKT 2
+​GitHub: @R1dzzz
+​Project: Tugas Eksplorasi Aplikasi Berbasis AI
+​<p align="left">
+<a href="https://github.com/R1dzzz">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Follow-R1dzzz-black%3Fstyle%3Dflat-square%26logo%3Dgithub" alt="Follow GitHub" />
+</a>
+</p>
+​<p align="center">
 <i>"Harnessing the power of AI to build a smarter future."</i>
 </p>
 ```
