@@ -13,7 +13,7 @@
 ---
 
 ## 🌟 Tentang Proyek
-Proyek ini adalah platform web katalog yang dirancang khusus untuk memberikan edukasi mengenai ekosistem teknologi AI saat ini. Dibangun sebagai bagian dari tugas eksplorasi kelas **XI TJKT 2**, web ini menyajikan informasi mendalam mengenai aplikasi AI yang terbagi dalam kategori:
+Proyek ini adalah platform web katalog yang dirancang khusus untuk memberikan edukasi mengenai ekosistem teknologi AI saat ini. Dibangun sebagai bagian dari tugas eksplorasi materi **SIJA** kelas **XI TJKT 2**, web ini menyajikan informasi mendalam mengenai aplikasi AI yang terbagi dalam kategori:
 - 💬 **Chatbot & Asisten Virtual**
 - 🎨 **Kreativitas & Desain Grafis**
 - ✍️ **Produktivitas & Penulisan**
@@ -49,12 +49,12 @@ Proyek ini adalah platform web katalog yang dirancang khusus untuk memberikan ed
 Jika ingin menjalankan proyek ini di komputer kamu:
  1. Clone repositori:
    ```bash
-   git clone [https://github.com/R1dzzz/TUGAS-AI-APPS.git](https://github.com/R1dzzz/TUGAS-AI-APPS.git)
+   git clone [https://github.com/R1dzzz/mytask.git](https://github.com/R1dzzz/mytask.git)
    
    ```
  2. Masuk ke folder proyek:
    ```bash
-   cd TUGAS-AI-APPS
+   cd mytask
    
    ```
  3. Buka file index.html di browser.
@@ -73,14 +73,4 @@ Proyek ini menggunakan lisensi **MIT**. Kamu bebas menyalin, memodifikasi, dan m
 <p align="center">
 <i>"Harnessing the power of AI to build a smarter future."</i>
 </p>
-```
-
-### Tips Penggunaan:
-
-1.  Buka repositori kamu di GitHub.
-2.  Klik tombol **Add file** \> **Create new file**.
-3.  Beri nama file: `README.md`.
-4.  Tempel (paste) teks di atas ke dalam kolom yang tersedia.
-5.  Klik **Commit changes...** untuk menyimpan.
-
 ```
