@@ -34,8 +34,6 @@ Proyek ini adalah platform web katalog yang dirancang khusus untuk memberikan ed
 | **Icons** | Simple Icons & LobeHub Icons |
 | **Version Control** | GitHub |
 
-```
-
 ## ⚙️ Instalasi Lokal
 Jika ingin menjalankan proyek ini di komputer kamu:
  1. Clone repositori:
