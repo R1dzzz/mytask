@@ -33,17 +33,6 @@ Proyek ini adalah platform web katalog yang dirancang khusus untuk memberikan ed
 | **Fonts** | Space Mono & Outfit (Google Fonts) |
 | **Icons** | Simple Icons & LobeHub Icons |
 | **Version Control** | GitHub |
-
-## 📂 Struktur Repositori
-```text
-.
-├── index.html          # Struktur konten utama
-├── style.css           # Pengaturan tata letak dan desain
-├── script.js          # Logika pencarian dan interaktivitas
-├── profile.jpg         # Foto profil penyusun
-├── favicon.jpg         # Icon tab browser
-└── LICENSE             # File lisensi MIT
-
 ```
 ## ⚙️ Instalasi Lokal
 Jika ingin menjalankan proyek ini di komputer kamu:
@@ -62,10 +51,11 @@ Jika ingin menjalankan proyek ini di komputer kamu:
 Proyek ini menggunakan lisensi **MIT**. Kamu bebas menyalin, memodifikasi, dan menggunakan kembali kode ini untuk keperluan edukasi atau pribadi.
 ## 👤 Penyusun
 ​
-​Nama: Farid Alfiyansah
-​Kelas: XI TJKT 2
-​GitHub: @R1dzzz
-​Project: Tugas Eksplorasi Aplikasi Berbasis AI
+​**Nama:** Farid Alfiyansah
+**Kelas:** XI TJKT II
+**Github:** @Ridzzz
+**Projek:** Tugas Eksploitasi Aplikasi Berbasis AI
+
 ​<p align="center">
 <i>"Harnessing the power of AI to build a smarter future."</i>
 </p>
