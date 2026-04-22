@@ -137,3 +137,25 @@ footer span{color:var(--c1);}
   .credit-card{flex-direction:column;align-items:flex-start;}
   .conclusion-inner{padding:20px 18px;}
 }
+
+/* Penambahan gaya untuk Lisensi di Footer */
+.license-info {
+  margin-top: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.license-info a {
+  color: var(--c1);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(124, 58, 237, 0.4);
+  transition: all 0.2s;
+}
+
+.license-info a:hover {
+  color: var(--white);
+  border-bottom-color: var(--white);
+}
+
