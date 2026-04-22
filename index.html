@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aplikasi AI Populer — XI TJKT 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">XI <span>TJKT</span> 2</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" style="--ac:var(--c1)" onclick="filterCat('all',this)">Semua</button>
+    <button class="nav-tab" style="--ac:var(--c1)" onclick="filterCat('1',this)">💬 Chatbot</button>
+    <button class="nav-tab" style="--ac:var(--c2)" onclick="filterCat('2',this)">🎨 Desain</button>
+    <button class="nav-tab" style="--ac:var(--c3)" onclick="filterCat('3',this)">✍️ Produktivitas</button>
+    <button class="nav-tab" style="--ac:var(--c4)" onclick="filterCat('4',this)">📚 Edukasi</button>
+    <button class="nav-tab" style="--ac:var(--c5)" onclick="filterCat('5',this)">🎬 Media</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-badge">
+    <div class="hero-dot"></div>
+    <span>Tugas Eksplorasi Teknologi AI</span>
+  </div>
+  <h1>Aplikasi Berbasis AI<br>yang Populer Digunakan</h1>
+  <p>Eksplorasi 30 aplikasi kecerdasan buatan terpopuler yang mempermudah pekerjaan di berbagai bidang — dari chatbot hingga video sinematik.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">30</div><div class="stat-label">Aplikasi AI</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Kategori</div></div>
+    <div class="stat"><div class="stat-num">2026</div><div class="stat-label">Tahun Data</div></div>
+  </div>
+</section>
+
+<div class="search-wrap">
+  <svg class="search-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  <input class="search-input" type="text" placeholder="Cari aplikasi AI, fitur, atau kategori..." id="searchInput" oninput="handleSearch()"/>
+</div>
+
+<main class="main" id="mainContent">
+<div class="no-results" id="noResults">Tidak ada aplikasi yang cocok. Coba kata kunci lain.</div>
+
+<section class="category" id="cat-1" style="--cat-color:var(--c1);--cat-bg:rgba(124,58,237,.1);">
+  <div class="cat-header">
+    <div class="cat-icon-wrap">💬</div>
+    <div class="cat-meta"><div class="cat-num">Kategori 01</div><div class="cat-title">Chatbot &amp; Asisten Virtual (Teks &amp; Bahasa)</div></div>
+    <div class="cat-count">6 Aplikasi</div>
+  </div>
+  <div class="apps-grid">
+
+    <div class="app-card" data-cat="1" data-name="chatgpt openai gpt tanya jawab coding terjemahan analisis suara gambar" style="--cat-color:var(--c1);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/openai.png" alt="ChatGPT" onerror="this.parentElement.innerHTML='🤖'"></div>
+        <div class="card-title-wrap"><div class="app-name">ChatGPT</div><div class="app-dev">by OpenAI · chat.openai.com</div></div>
+        <div class="app-badge">Teks &amp; Suara</div>
+      </div>
+      <div class="app-desc">ChatGPT adalah chatbot AI paling populer di dunia yang dikembangkan oleh OpenAI menggunakan model GPT-4o. Mampu melakukan percakapan alami, menjawab pertanyaan ilmiah yang kompleks, membuat dan men-debug kode program dalam berbagai bahasa pemrograman, menerjemahkan teks ke 50+ bahasa, meringkas dokumen panjang, menganalisis data, dan membantu brainstorming ide kreatif. Versi gratis sudah sangat mumpuni, sementara versi Plus ($20/bulan) memberikan akses ke GPT-4o terbaru dengan kemampuan browsing internet real-time, analisis gambar, dan mode suara percakapan yang sangat natural.</div>
+      <div class="app-features"><span class="feature-tag">Tanya Jawab</span><span class="feature-tag">Coding</span><span class="feature-tag">Terjemahan</span><span class="feature-tag">Image Analysis</span><span class="feature-tag">Voice Mode</span><span class="feature-tag">Gratis/Plus</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar, programmer, penulis, peneliti, dan siapapun yang butuh asisten pintar 24 jam.</div>
+    </div>
+
+    <div class="app-card" data-cat="1" data-name="gemini google multimodal gmail docs sheets drive real-time search" style="--cat-color:var(--c1);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/gemini.png" alt="Gemini" onerror="this.parentElement.innerHTML='✨'"></div>
+        <div class="card-title-wrap"><div class="app-name">Google Gemini</div><div class="app-dev">by Google DeepMind · gemini.google.com</div></div>
+        <div class="app-badge">Multimodal</div>
+      </div>
+      <div class="app-desc">Google Gemini adalah model AI generasi terbaru dari Google yang dirancang sebagai asisten pintar lintas platform. Keunggulan utamanya adalah integrasi mendalam dengan ekosistem Google seperti Gmail (merangkum email masuk), Docs (membantu menulis dan mengedit), Sheets (membuat formula otomatis), Drive, dan Google Search. Gemini mendukung multimodal yakni bisa memproses teks, gambar, audio, dan video secara bersamaan. Gemini 1.5 Pro bahkan memiliki context window hingga 1 juta token, memungkinkannya membaca seluruh buku dalam sekali sesi. Tersedia gratis dan versi Advanced.</div>
+      <div class="app-features"><span class="feature-tag">Multimodal</span><span class="feature-tag">Google Workspace</span><span class="feature-tag">1M Context</span><span class="feature-tag">Real-time Search</span><span class="feature-tag">Gratis</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pengguna aktif layanan Google, pelajar yang sering pakai Google Docs/Sheets, dan yang butuh AI terintegrasi langsung.</div>
+    </div>
+
+    <div class="app-card" data-cat="1" data-name="claude anthropic riset analisis dokumen panjang aman akurat jujur" style="--cat-color:var(--c1);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/claude.png" alt="Claude" onerror="this.parentElement.innerHTML='🌟'"></div>
+        <div class="card-title-wrap"><div class="app-name">Claude</div><div class="app-dev">by Anthropic · claude.ai</div></div>
+        <div class="app-badge">Teks &amp; Analisis</div>
+      </div>
+      <div class="app-desc">Claude adalah AI asisten dari Anthropic yang terkenal karena tingkat akurasi yang sangat tinggi, kemampuan nalar yang kuat, and sangat aman digunakan. Claude unggul dalam memproses dokumen sangat panjang seperti laporan keuangan, jurnal ilmiah, atau kontrak hukum. Claude Sonnet dan Opus terbaru mampu menulis kode kompleks multi-file, melakukan analisis mendalam atas data terstruktur, dan menjelaskan konsep sulit dengan bahasa yang mudah dipahami. Claude dikenal jujur dan transparan — ia akan mengakui ketidaktahuannya daripada memberikan informasi yang salah.</div>
+      <div class="app-features"><span class="feature-tag">Dokumen Panjang</span><span class="feature-tag">Riset Mendalam</span><span class="feature-tag">Coding</span><span class="feature-tag">Analisis Data</span><span class="feature-tag">Sangat Akurat</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Peneliti, mahasiswa, pengacara, dan developer yang butuh AI dengan akurasi dan kejujuran tinggi.</div>
+    </div>
+
+    <div class="app-card" data-cat="1" data-name="microsoft copilot windows office 365 gpt word excel powerpoint teams" style="--cat-color:var(--c1);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/microsoftcopilot.png" alt="Copilot" onerror="this.parentElement.innerHTML='🪟'"></div>
+        <div class="card-title-wrap"><div class="app-name">Microsoft Copilot</div><div class="app-dev">by Microsoft · copilot.microsoft.com</div></div>
+        <div class="app-badge">Asisten OS</div>
+      </div>
+      <div class="app-desc">Microsoft Copilot adalah asisten AI berbasis GPT-4 yang terintegrasi langsung ke seluruh ekosistem Microsoft. Di Windows 11, Copilot bisa dipanggil kapan saja dengan tombol khusus. Di Microsoft 365, Copilot membantu merangkum email di Outlook, membuat dokumen Word dari outline kasar, menghasilkan formula dan analisis data di Excel, mendesain slide PowerPoint otomatis, serta merangkum percakapan di Teams. Copilot juga terintegrasi di browser Edge sebagai asisten web. Tersedia gratis untuk pengguna Windows 11 dan berbayar untuk fitur Microsoft 365.</div>
+      <div class="app-features"><span class="feature-tag">Windows 11</span><span class="feature-tag">Word/Excel/PPT</span><span class="feature-tag">Teams</span><span class="feature-tag">Outlook</span><span class="feature-tag">Edge Browser</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pengguna Windows dan Microsoft Office yang ingin tingkatkan produktivitas tanpa berpindah aplikasi.</div>
+    </div>
+
+    <div class="app-card" data-cat="1" data-name="perplexity pencarian riset referensi sumber terverifikasi berita akademik" style="--cat-color:var(--c1);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/perplexity.png" alt="Perplexity" onerror="this.parentElement.innerHTML='🔍'"></div>
+        <div class="card-title-wrap"><div class="app-name">Perplexity AI</div><div class="app-dev">by Perplexity AI Inc. · perplexity.ai</div></div>
+        <div class="app-badge">Search AI</div>
+      </div>
+      <div class="app-desc">Perplexity AI adalah mesin pencari generasi baru yang menggabungkan kekuatan large language model dengan pencarian web real-time. Berbeda dari Google yang memberikan daftar link, Perplexity langsung memberikan jawaban ringkas dan akurat disertai kutipan sumber yang bisa diverifikasi. Fitur Focus Mode memungkinkan pencarian khusus di YouTube, Reddit, paper akademik (Semantic Scholar), atau berita terkini. Perplexity juga mendukung follow-up pertanyaan untuk pendalaman topik secara berurutan layaknya percakapan investigasi.</div>
+      <div class="app-features"><span class="feature-tag">Real-time Web</span><span class="feature-tag">Sumber Terverifikasi</span><span class="feature-tag">Akademik</span><span class="feature-tag">Fact-check</span><span class="feature-tag">Gratis</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar yang sering riset, jurnalis, peneliti, dan siapa saja yang butuh informasi akurat dengan referensi jelas.</div>
+    </div>
+
+    <div class="app-card" data-cat="1" data-name="deepseek china open source gratis coding penalaran lokal offline matematika" style="--cat-color:var(--c1);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/deepseek.png" alt="DeepSeek" onerror="this.parentElement.innerHTML='🐋'"></div>
+        <div class="card-title-wrap"><div class="app-name">DeepSeek</div><div class="app-dev">by DeepSeek (Hangzhou, China) · deepseek.com</div></div>
+        <div class="app-badge">Open Source</div>
+      </div>
+      <div class="app-desc">DeepSeek adalah model AI open-source dari perusahaan riset asal China yang menggemparkan industri teknologi global karena performanya setara GPT-4 namun dengan biaya pelatihan yang hanya sepersepuluh. Model DeepSeek-R1 dirancang dengan arsitektur Mixture of Experts (MoE) dan dioptimalkan khusus untuk penalaran logis (chain-of-thought reasoning) yang sangat kuat, sehingga sangat unggul dalam matematika kompetisi, pemecahan soal logika, and coding tingkat lanjut. Karena bersifat open-source, model ini bisa dijalankan secara lokal di komputer pribadi tanpa koneksi internet untuk menjaga privasi data.</div>
+      <div class="app-features"><span class="feature-tag">Open-Source</span><span class="feature-tag">Jalankan Lokal</span><span class="feature-tag">Penalaran Kuat</span><span class="feature-tag">Matematika</span><span class="feature-tag">Gratis</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Developer, peneliti, and pengguna yang ingin AI powerful tanpa biaya berlangganan sambil menjaga privasi penuh.</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category" id="cat-2" style="--cat-color:var(--c2);--cat-bg:rgba(236,72,153,.1);">
+  <div class="cat-header">
+    <div class="cat-icon-wrap">🎨</div>
+    <div class="cat-meta"><div class="cat-num">Kategori 02</div><div class="cat-title">Kreativitas &amp; Desain Grafis (Gambar &amp; Video)</div></div>
+    <div class="cat-count" style="color:var(--c2);">6 Aplikasi</div>
+  </div>
+  <div class="apps-grid">
+
+    <div class="app-card" data-cat="2" data-name="canva desain grafis poster presentasi logo magic design background remover" style="--cat-color:var(--c2);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva" onerror="this.parentElement.innerHTML='🎨'"></div>
+        <div class="card-title-wrap"><div class="app-name">Canva AI</div><div class="app-dev">by Canva Pty Ltd · canva.com</div></div>
+        <div class="app-badge" style="color:#fff;">Desain</div>
+      </div>
+      <div class="app-desc">Canva adalah platform desain grafis berbasis web yang kini dilengkapi berbagai fitur AI sangat canggih dan mudah digunakan. Magic Design mampu membuat desain lengkap dan profesional hanya dari satu kalimat deskripsi teks. Text to Image menghasilkan ilustrasi original dari prompt teks. Magic Write membantu menulis konten, caption, dan copy untuk desain. Background Remover menghapus latar belakang foto hanya dalam satu klik tanpa perlu Photoshop. Magic Animate secara otomatis menambahkan animasi ke desain statis. Magic Edit mengubah bagian tertentu dari gambar sesuai instruksi. Tersedia ribuan template gratis untuk poster, presentasi, logo, konten media sosial, dan banyak lagi.</div>
+      <div class="app-features"><span class="feature-tag">Magic Design</span><span class="feature-tag">Text-to-Image</span><span class="feature-tag">BG Remover</span><span class="feature-tag">Magic Animate</span><span class="feature-tag">Template Gratis</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar, guru, content creator, UMKM, and siapa saja yang butuh desain cepat tanpa keahlian desain khusus.</div>
+    </div>
+
+    <div class="app-card" data-cat="2" data-name="midjourney gambar seni digital ilustrasi text to image discord artistik fotorealistis" style="--cat-color:var(--c2);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/midjourney/ffffff" alt="Midjourney" onerror="this.parentElement.innerHTML='🖼️'"></div>
+        <div class="card-title-wrap"><div class="app-name">Midjourney</div><div class="app-dev">by Midjourney Inc. · midjourney.com</div></div>
+        <div class="app-badge" style="color:#fff;">Image AI</div>
+      </div>
+      <div class="app-desc">Midjourney adalah generator gambar AI terbaik di kelasnya yang menghasilkan karya seni visual dengan kualitas artistik luar biasa tinggi dari deskripsi teks (prompt). Gambar yang dihasilkan memiliki estetika yang kaya dan beragam — mulai dari fotorealistis berkualitas studio, lukisan minyak klasik, ilustrasi manga, seni konsep game 3D, hingga gambar surrealis. Midjourney v6 menghadirkan konsistensi karakter antar gambar, pemahaman teks yang jauh lebih akurat dalam gambar, and resolusi hingga 4K. Diakses melalui Discord (dan kini website sendiri) dengan sistem perintah /imagine yang intuitif.</div>
+      <div class="app-features"><span class="feature-tag">Text-to-Image</span><span class="feature-tag">Ultra HD 4K</span><span class="feature-tag">Karakter Konsisten</span><span class="feature-tag">50+ Art Styles</span><span class="feature-tag">Discord/Web</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Seniman digital, ilustrator, desainer game, concept artist, and kreator yang butuh visual berkualitas sinematik.</div>
+    </div>
+
+    <div class="app-card" data-cat="2" data-name="adobe firefly photoshop generative fill expand text effect ilustrator legal hak cipta" style="--cat-color:var(--c2);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/adobefirefly/FF0000" alt="Adobe Firefly" onerror="this.parentElement.innerHTML='🔥'"></div>
+        <div class="card-title-wrap"><div class="app-name">Adobe Firefly</div><div class="app-dev">by Adobe Inc. · firefly.adobe.com</div></div>
+        <div class="app-badge" style="color:#fff;">Generatif</div>
+      </div>
+      <div class="app-desc">Adobe Firefly adalah mesin AI generatif milik Adobe yang terintegrasi mulus ke dalam Photoshop, Illustrator, and Adobe Express. Fitur Generative Fill memungkinkan pengguna mengisi atau mengganti area kosong atau objek dalam foto dengan konten baru yang realistis hanya dari instruksi teks. Generative Expand memperlebar gambar melampaui batas originalnya secara cerdas. Text Effects menciptakan efek tipografi artistik yang spektakuler dari satu kalimat perintah. Keunggulan kompetitif utama Firefly adalah keamanan hak cipta — seluruh model dilatih menggunakan konten berlisensi dari Adobe Stock sehingga aman 100% untuk penggunaan komersial.</div>
+      <div class="app-features"><span class="feature-tag">Generative Fill</span><span class="feature-tag">Generative Expand</span><span class="feature-tag">Text Effects</span><span class="feature-tag">Aman Komersial</span><span class="feature-tag">Photoshop/AI</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Desainer profesional, fotografer, and tim kreatif yang butuh AI dalam workflow Adobe yang sudah ada.</div>
+    </div>
+
+    <div class="app-card" data-cat="2" data-name="runway ml video animasi text to video gen3 green screen motion brush efek visual" style="--cat-color:var(--c2);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/runway/ffffff" alt="Runway" onerror="this.parentElement.innerHTML='🎬'"></div>
+        <div class="card-title-wrap"><div class="app-name">Runway ML</div><div class="app-dev">by Runway AI Inc. · runwayml.com</div></div>
+        <div class="app-badge" style="color:#fff;">Video AI</div>
+      </div>
+      <div class="app-desc">Runway adalah platform AI terdepan untuk produksi video kreatif profesional yang digunakan oleh studio-studio Hollywood. Gen-3 Alpha, model video terbarunya, mampu menghasilkan video sinematik berkualitas tinggi dengan kontrol kamera yang presisi dari teks atau gambar referensi. Fitur Green Screen AI menghapus background tanpa perlu layar hijau fisik. Motion Brush menganimasikan bagian spesifik dari gambar diam. Act One memindahkan ekspresi and gerakan aktor ke karakter animasi 3D. Frame Interpolation mengubah video normal menjadi super slow motion yang halus. Expand Image memperlebar frame gambar secara cerdas.</div>
+      <div class="app-features"><span class="feature-tag">Gen-3 Alpha</span><span class="feature-tag">AI Green Screen</span><span class="feature-tag">Motion Brush</span><span class="feature-tag">Act One</span><span class="feature-tag">Slow Motion</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Filmmaker, content creator profesional, and tim produksi yang butuh efek visual sinematik tanpa studio mahal.</div>
+    </div>
+
+    <div class="app-card" data-cat="2" data-name="capcut video edit caption tts auto mobile tiktok reels youtube shorts" style="--cat-color:var(--c2);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/capcut/ffffff" alt="CapCut" onerror="this.parentElement.innerHTML='✂️'"></div>
+        <div class="card-title-wrap"><div class="app-name">CapCut AI</div><div class="app-dev">by ByteDance · capcut.com</div></div>
+        <div class="app-badge" style="color:#fff;">Video Edit</div>
+      </div>
+      <div class="app-desc">CapCut adalah aplikasi edit video gratis yang sangat populer di kalangan pelajar and kreator konten berkat kemudahan penggunaan and fitur AI-nya yang lengkap. Auto Caption secara otomatis membuat subtitle dari audio dengan akurasi tinggi and mendukung Bahasa Indonesia. Text-to-Speech menyediakan puluhan pilihan suara AI yang natural untuk narasi. Smart Cut menghapus bagian senyap dari rekaman secara otomatis menghemat waktu edit drastis. AI Background Remover bekerja real-time di video tanpa layar hijau. AI Script Generator membantu membuat naskah video berdasarkan topik. AI Color Grading menyesuaikan warna video secara profesional otomatis.</div>
+      <div class="app-features"><span class="feature-tag">Auto Caption ID</span><span class="feature-tag">Text-to-Speech</span><span class="feature-tag">Smart Cut</span><span class="feature-tag">BG Remover</span><span class="feature-tag">AI Color Grade</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar TJKT, content creator TikTok/YouTube Shorts, and siapapun yang ingin edit video profesional dari HP secara gratis.</div>
+    </div>
+
+    <div class="app-card" data-cat="2" data-name="dalle openai gambar fotorealistis text to image chatgpt teks dalam gambar ilustrasi" style="--cat-color:var(--c2);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/dalle.png" alt="DALL-E 3" onerror="this.parentElement.innerHTML='🖼️'"></div>
+        <div class="card-title-wrap"><div class="app-name">DALL·E 3</div><div class="app-dev">by OpenAI · via ChatGPT</div></div>
+        <div class="app-badge" style="color:#fff;">Image Gen</div>
+      </div>
+      <div class="app-desc">DALL·E 3 adalah model text-to-image terbaru OpenAI yang terintegrasi langsung di dalam ChatGPT, sehingga bisa digunakan tanpa berpindah platform. Perbedaan besar dari versi sebelumnya adalah kemampuannya memahami instruksi yang jauh lebih detail and kompleks, menghasilkan gambar yang sangat sesuai dengan prompt panjang sekalipun. Mampu menggambar teks yang terbaca dalam gambar (sesuatu yang sulit bagi AI lain), membuat ilustrasi karakter dengan detail konsisten, komposisi artistik yang kompleks, and visual fotorealistis. Mendukung berbagai rasio aspek and dapat menggabungkan berbagai elemen konsep yang berbeda dalam satu gambar.</div>
+      <div class="app-features"><span class="feature-tag">Text-to-Image</span><span class="feature-tag">Teks dalam Gambar</span><span class="feature-tag">Fotorealistis</span><span class="feature-tag">ChatGPT Built-in</span><span class="feature-tag">Multi Rasio</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pengguna ChatGPT yang ingin generate gambar langsung dari satu platform tanpa belajar teknik prompting rumit.</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category" id="cat-3" style="--cat-color:var(--c3);--cat-bg:rgba(245,158,11,.1);">
+  <div class="cat-header">
+    <div class="cat-icon-wrap">✍️</div>
+    <div class="cat-meta"><div class="cat-num">Kategori 03</div><div class="cat-title">Produktivitas &amp; Penulisan</div></div>
+    <div class="cat-count" style="color:var(--c3);">6 Aplikasi</div>
+  </div>
+  <div class="apps-grid">
+
+    <div class="app-card" data-cat="3" data-name="notion ai catatan produktivitas ringkasan database tulis meeting proyek kolaborasi" style="--cat-color:var(--c3);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/notion/ffffff" alt="Notion" onerror="this.parentElement.innerHTML='📝'"></div>
+        <div class="card-title-wrap"><div class="app-name">Notion AI</div><div class="app-dev">by Notion Labs · notion.so</div></div>
+        <div class="app-badge">Produktivitas</div>
+      </div>
+      <div class="app-desc">Notion adalah aplikasi all-in-one untuk catatan, manajemen proyek, wiki tim, and database yang kini diperkuat oleh Notion AI. Fitur AI Writer membantu menulis konten dari awal, melanjutkan tulisan yang ada, atau meringkas teks panjang dalam beberapa kalimat. AI Q&amp;A memungkinkan pengguna bertanya langsung tentang isi seluruh workspace mereka and mendapatkan jawaban instan berdasarkan dokumen yang sudah ada. Auto-fill Database dapat mengisi kolom database secara otomatis berdasarkan konten yang ada. Notion AI juga bisa membuat action items dari meeting notes, menerjemahkan konten, mengubah tone tulisan, and menghasilkan template dokumen sesuai kebutuhan.</div>
+      <div class="app-features"><span class="feature-tag">AI Writer</span><span class="feature-tag">AI Q&amp;A Workspace</span><span class="feature-tag">Auto Meeting Notes</span><span class="feature-tag">Database AI</span><span class="feature-tag">Terjemahan</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar organisasi, manajer proyek, tim startup, and content creator yang butuh satu platform untuk semua kebutuhan kerja.</div>
+    </div>
+
+    <div class="app-card" data-cat="3" data-name="grammarly grammar cek ejaan inggris penulisan extension browser word docs tone" style="--cat-color:var(--c3);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/grammarly/15C39A" alt="Grammarly" onerror="this.parentElement.innerHTML='✅'"></div>
+        <div class="card-title-wrap"><div class="app-name">Grammarly</div><div class="app-dev">by Grammarly Inc. · grammarly.com</div></div>
+        <div class="app-badge">Penulisan</div>
+      </div>
+      <div class="app-desc">Grammarly adalah asisten penulisan AI untuk Bahasa Inggris yang paling banyak digunakan di dunia dengan lebih dari 30 juta pengguna aktif harian. Secara real-time, Grammarly memeriksa and memperbaiki kesalahan tata bahasa, ejaan, tanda baca, gaya penulisan, kejelasan kalimat, and nada komunikasi. Fitur Grammarly GO (AI generatif) membantu menulis ulang seluruh paragraf, mengubah gaya tulisan dari formal ke kasual atau sebaliknya, menyesuaikan tone email untuk audiens berbeda, and membuat draf surat profesional dari poin-poin kasar. Tersedia sebagai ekstensi Chrome/Edge, aplikasi desktop Windows/Mac, and terintegrasi langsung di Microsoft Word and Google Docs.</div>
+      <div class="app-features"><span class="feature-tag">Grammar Real-time</span><span class="feature-tag">Tone Detection</span><span class="feature-tag">Parafrase AI</span><span class="feature-tag">Chrome Extension</span><span class="feature-tag">Word Integration</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar yang belajar Bahasa Inggris, profesional yang sering kirim email internasional, and peneliti yang menulis paper.</div>
+    </div>
+
+    <div class="app-card" data-cat="3" data-name="jasper copywriting marketing blog artikel iklan seo brand voice template" style="--cat-color:var(--c3);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/jasper/FF6600" alt="Jasper" onerror="this.parentElement.innerHTML='📣'"></div>
+        <div class="card-title-wrap"><div class="app-name">Jasper AI</div><div class="app-dev">by Jasper AI Inc. · jasper.ai</div></div>
+        <div class="app-badge">Copywriting</div>
+      </div>
+      <div class="app-desc">Jasper AI adalah platform penulisan konten berbasis AI yang dirancang khusus untuk kebutuhan pemasaran digital and bisnis skala besar. Memiliki lebih dari 50 template siap pakai yang mencakup berbagai jenis konten: artikel blog SEO yang komprehensif, caption media sosial Instagram/TikTok/LinkedIn, iklan Google Ads and Facebook Ads, deskripsi produk e-commerce yang persuasif, email marketing sequences, video script YouTube, press release, and product launch copy. Fitur Brand Voice memungkinkan Jasper mempelajari tone and gaya komunikasi spesifik sebuah merek sehingga semua konten yang dihasilkan konsisten. Mendukung 30+ bahasa termasuk Bahasa Indonesia.</div>
+      <div class="app-features"><span class="feature-tag">50+ Template</span><span class="feature-tag">Brand Voice</span><span class="feature-tag">SEO Optimizer</span><span class="feature-tag">30+ Bahasa</span><span class="feature-tag">Tim Kolaborasi</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Marketer, pemilik bisnis online, UMKM, content writer, and tim pemasaran yang butuh konten massal berkualitas.</div>
+    </div>
+
+    <div class="app-card" data-cat="3" data-name="otter transkripsi suara teks meeting rekam real-time zoom google meet teams" style="--cat-color:var(--c3);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/otterai/4D8EFF" alt="Otter.ai" onerror="this.parentElement.innerHTML='🎙️'"></div>
+        <div class="card-title-wrap"><div class="app-name">Otter.ai</div><div class="app-dev">by Otter.ai Inc. · otter.ai</div></div>
+        <div class="app-badge">Transkripsi</div>
+      </div>
+      <div class="app-desc">Otter.ai adalah aplikasi transkripsi berbasis AI yang mengubah percakapan, audio, and video menjadi teks tertulis secara real-time with akurasi sangat tinggi. Fitur pembeda utama: Speaker Identification secara otomatis membedakan and melabeli suara setiap pembicara yang berbeda dalam satu rekaman. Auto Summary membuat ringkasan and poin utama dari seluruh percakapan secara otomatis. AI Chat memungkinkan pengguna mengajukan pertanyaan tentang konten rekaman and mendapatkan jawaban instan. Terintegrasi langsung dengan Zoom, Google Meet, and Microsoft Teams untuk transkripsi rapat online otomatis tanpa usaha ekstra. Tersedia gratis 300 menit per bulan.</div>
+      <div class="app-features"><span class="feature-tag">Real-time Transkripsi</span><span class="feature-tag">Speaker ID</span><span class="feature-tag">Auto Summary</span><span class="feature-tag">AI Chat</span><span class="feature-tag">Zoom/Meet Integrasi</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Mahasiswa kuliah online, jurnalis wawancara, and profesional yang banyak mengikuti rapat virtual and butuh catatan otomatis.</div>
+    </div>
+
+    <div class="app-card" data-cat="3" data-name="gamma presentasi slide otomatis text to presentation dokumen web cepat profesional" style="--cat-color:var(--c3);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/gamma/6C47FF" alt="Gamma" onerror="this.parentElement.innerHTML='📊'"></div>
+        <div class="card-title-wrap"><div class="app-name">Gamma App</div><div class="app-dev">by Gamma Tech Inc. · gamma.app</div></div>
+        <div class="app-badge">Presentasi AI</div>
+      </div>
+      <div class="app-desc">Gamma adalah platform revolusioner berbasis AI yang mengubah total cara membuat presentasi, dokumen, and halaman web. Cukup masukkan topik atau paste outline kasar dalam teks biasa, and Gamma AI akan secara otomatis menghasilkan presentasi lengkap dengan layout slide yang rapi, visual yang relevan dari database gambar, konten yang terstruktur logis, and desain yang estetis — semua dalam hitungan detik. Gamma mendukung berbagai format output: presentasi interaktif yang bisa diklik, one-pager dokumen, and microsite web sederhana. Presentasi bisa dibagikan melalui link langsung atau diekspor ke PowerPoint/PDF. Tersedia gratis dengan kredit terbatas.</div>
+      <div class="app-features"><span class="feature-tag">Text-to-Slides</span><span class="feature-tag">Auto Layout</span><span class="feature-tag">Share via Link</span><span class="feature-tag">Export PPT/PDF</span><span class="feature-tag">Gratis</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar yang sering presentasi, guru yang membuat materi ajar, and profesional yang butuh deck profesional dengan cepat.</div>
+    </div>
+
+    <div class="app-card" data-cat="3" data-name="copy ai teks caption email seo marketing konten sosial media deskripsi produk workflow" style="--cat-color:var(--c3);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/copyai/8B5CF6" alt="Copy.ai" onerror="this.parentElement.innerHTML='📋'"></div>
+        <div class="card-title-wrap"><div class="app-name">Copy.ai</div><div class="app-dev">by Copy.ai Inc. · copy.ai</div></div>
+        <div class="app-badge">Generator Teks</div>
+      </div>
+      <div class="app-desc">Copy.ai adalah generator teks AI yang dirancang khusus untuk mempercepat pembuatan konten pemasaran and penjualan. Dengan lebih dari 90 tools and template yang dikategorikan, Copy.ai membantu membuat berbagai jenis konten: caption Instagram/TikTok yang engaging, email marketing dengan subject line menarik, deskripsi produk untuk Tokopedia/Shopee yang persuasif, proposal bisnis, tagline merek, cold outreach email untuk tim sales, bio profil LinkedIn, and konten blog SEO. Fitur Workflows memungkinkan otomatisasi proses pembuatan konten yang berulang dalam pipeline yang bisa dikonfigurasi. Mendukung Bahasa Indonesia and tersedia paket gratis 2000 kata/bulan.</div>
+      <div class="app-features"><span class="feature-tag">90+ Tools</span><span class="feature-tag">Caption IG/TikTok</span><span class="feature-tag">Email Marketing</span><span class="feature-tag">Deskripsi Produk</span><span class="feature-tag">Workflows AI</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> UMKM online, reseller, dropshipper, content creator, and tim sales yang butuh konten pemasaran berkualitas dengan cepat.</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category" id="cat-4" style="--cat-color:var(--c4);--cat-bg:rgba(16,185,129,.1);">
+  <div class="cat-header">
+    <div class="cat-icon-wrap">📚</div>
+    <div class="cat-meta"><div class="cat-num">Kategori 04</div><div class="cat-title">Edukasi &amp; Tugas</div></div>
+    <div class="cat-count" style="color:var(--c4);">6 Aplikasi</div>
+  </div>
+  <div class="apps-grid">
+
+    <div class="app-card" data-cat="4" data-name="khan academy khanmigo tutor matematika sains belajar kritis socratic bimbingan" style="--cat-color:var(--c4);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/khanacademy/14BF96" alt="Khan Academy" onerror="this.parentElement.innerHTML='🎓'"></div>
+        <div class="card-title-wrap"><div class="app-name">Khanmigo</div><div class="app-dev">by Khan Academy · khanacademy.org</div></div>
+        <div class="app-badge" style="color:#fff;">Tutor AI</div>
+      </div>
+      <div class="app-desc">Khanmigo adalah tutor AI dari Khan Academy yang menggunakan GPT-4 untuk membimbing pelajar memahami konsep akademik dengan cara yang paling tepat. Filosofi unik Khanmigo: ia tidak pernah langsung memberikan jawaban, melainkan membimbing siswa untuk berpikir kritis and menemukan jawabannya sendiri melalui pertanyaan-pertanyaan Socratik yang terstruktur. Tersedia untuk berbagai mata pelajaran: matematika (dari aritmatika dasar hingga kalkulus), sains (fisika, kimia, biologi), pemrograman komputer, sejarah dunia, and literasi. Fitur unik: Khanmigo bisa berperan sebagai karakter bersejarah (misalnya berdiskusi dengan "Einstein" atau "Cleopatra") untuk pembelajaran sejarah yang interaktif and menyenangkan. Gratis untuk guru.</div>
+      <div class="app-features"><span class="feature-tag">Metode Socratic</span><span class="feature-tag">Matematika-Kalkulus</span><span class="feature-tag">Sains</span><span class="feature-tag">Pemrograman</span><span class="feature-tag">Gratis Guru</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar SD-SMA yang butuh bimbingan belajar mendalam, and guru yang ingin integrasikan AI dalam pembelajaran.</div>
+    </div>
+
+    <div class="app-card" data-cat="4" data-name="socratic google foto soal langkah penyelesaian pelajaran matematika fisika kimia biologi" style="--cat-color:var(--c4);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/google/4285F4" alt="Socratic" onerror="this.parentElement.innerHTML='📸'"></div>
+        <div class="card-title-wrap"><div class="app-name">Socratic by Google</div><div class="app-dev">by Google LLC · socratic.org</div></div>
+        <div class="app-badge" style="color:#fff;">Foto Soal</div>
+      </div>
+      <div class="app-desc">Socratic adalah aplikasi belajar berbasis AI dari Google yang memungkinkan pelajar memotret soal atau pertanyaan akademik menggunakan kamera smartphone and mendapatkan penjelasan lengkap langkah demi langkah secara instan. Teknologi Google AI canggih mengenali teks dari gambar (OCR), memahami konteks soal, and memberikan penjelasan mendalam disertai diagram visual yang informatif, video YouTube yang relevan, artikel penjelasan, and referensi materi terkait. Mendukung berbagai mata pelajaran: matematika (aljabar, geometri, kalkulus), fisika, kimia, biologi, sejarah, hingga sastra and bahasa asing. Tersedia gratis untuk Android and iOS.</div>
+      <div class="app-features"><span class="feature-tag">Foto Soal Kamera</span><span class="feature-tag">Step-by-step</span><span class="feature-tag">Diagram Visual</span><span class="feature-tag">Video Penjelasan</span><span class="feature-tag">Gratis</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar SMP and SMA yang kesulitan mengerjakan PR and butuh penjelasan mendalam, bukan sekadar jawaban akhir.</div>
+    </div>
+
+    <div class="app-card" data-cat="4" data-name="quizlet flashcard kuis belajar adaptif memori hafalan q-chat tutor" style="--cat-color:var(--c4);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/quizlet/4257B2" alt="Quizlet" onerror="this.parentElement.innerHTML='🃏'"></div>
+        <div class="card-title-wrap"><div class="app-name">Quizlet AI</div><div class="app-dev">by Quizlet Inc. · quizlet.com</div></div>
+        <div class="app-badge" style="color:#fff;">Flashcard</div>
+      </div>
+      <div class="app-desc">Quizlet adalah platform belajar berbasis flashcard yang kini diperkuat AI untuk pengalaman belajar yang lebih personal and efektif. Fitur AI terbaru: Magic Notes secara otomatis membuat set flashcard dari catatan, buku teks, atau dokumen PDF yang diunggah. Quizlet Q-Chat adalah tutor AI yang mengajak belajar melalui percakapan interaktif, memberikan pertanyaan latihan, and menjelaskan jawaban yang salah. Sistem belajar adaptif menyesuaikan tingkat kesulitan soal berdasarkan kelemahan masing-masing siswa secara personal. Tersedia 6 mode belajar yang beragam: flashcard, tulis, ejaan, kuis multiple choice, match (puzzle), and kompetisi — menjadikan belajar terasa seperti bermain game.</div>
+      <div class="app-features"><span class="feature-tag">Magic Notes AI</span><span class="feature-tag">Q-Chat Tutor</span><span class="feature-tag">Adaptive Learning</span><span class="feature-tag">6 Mode Belajar</span><span class="feature-tag">Import PDF</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar yang butuh hafal banyak materi (kosakata, rumus, tanggal) dengan cara yang menyenangkan and efektif secara ilmiah.</div>
+    </div>
+
+    <div class="app-card" data-cat="4" data-name="photomath kamera matematika kalkulus aljabar geometri langkah soal trigonometri statistik" style="--cat-color:var(--c4);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/photomath/5C87F6" alt="Photomath" onerror="this.parentElement.innerHTML='🔢'"></div>
+        <div class="card-title-wrap"><div class="app-name">Photomath</div><div class="app-dev">by Google (acq.) · photomath.com</div></div>
+        <div class="app-badge" style="color:#fff;">Matematika</div>
+      </div>
+      <div class="app-desc">Photomath adalah aplikasi kalkulator AI yang menyelesaikan soal matematika menggunakan kamera smartphone. Cukup arahkan kamera ke soal matematika yang tercetak di buku atau ditulis tangan di kertas, and Photomath langsung mengenali and menyelesaikannya sambil menampilkan setiap langkah penyelesaian secara sangat detail and mudah dimengerti. Mendukung berbagai tingkat kesulitan matematika: aritmatika dasar, pecahan, desimal, persamaan aljabar, fungsi, geometri, trigonometri, kalkulus diferensial and integral, hingga statistik and probabilitas. Kini diakuisisi Google, Photomath terus dikembangkan dengan penjelasan yang semakin lengkap and dukungan pengenalan tulisan tangan yang lebih akurat.</div>
+      <div class="app-features"><span class="feature-tag">Scan Kamera</span><span class="feature-tag">Tulisan Tangan</span><span class="feature-tag">Step-by-step Detail</span><span class="feature-tag">Kalkulus</span><span class="feature-tag">Gratis</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar semua tingkatan yang ingin memahami langkah penyelesaian matematika, dari SD hingga level universitas.</div>
+    </div>
+
+    <div class="app-card" data-cat="4" data-name="duolingo bahasa asing inggris jepang korea mandarin gamifikasi adaptif roleplay ai" style="--cat-color:var(--c4);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/duolingo/58CC02" alt="Duolingo" onerror="this.parentElement.innerHTML='🦉'"></div>
+        <div class="card-title-wrap"><div class="app-name">Duolingo AI</div><div class="app-dev">by Duolingo Inc. · duolingo.com</div></div>
+        <div class="app-badge" style="color:#fff;">Bahasa</div>
+      </div>
+      <div class="app-desc">Duolingo adalah aplikasi belajar bahasa asing terpopuler di dunia with lebih dari 500 juta pengguna terdaftar, yang kini diperkuat fitur AI canggih melalui paket Duolingo Max. Fitur AI terbaru: Roleplay memungkinkan pengguna berlatih percakapan nyata with karakter AI dalam skenario kehidupan nyata seperti memesan makanan di restoran, berbelanja, atau meminta petunjuk arah — memberikan pengalaman belajar yang jauh lebih kontekstual. Explain My Answer menjelaskan secara detail and personal mengapa jawaban pengguna benar atau salah beserta rule grammatika yang relevan. Sistem adaptive learning menyesuaikan kesulitan pelajaran setiap hari berdasarkan performa historis pengguna. Tersedia 40+ bahasa termasuk Jepang, Korea, Mandarin, Perancis, Spanyol, Arab, and Inggris.</div>
+      <div class="app-features"><span class="feature-tag">AI Roleplay</span><span class="feature-tag">Explain My Answer</span><span class="feature-tag">Adaptive Daily</span><span class="feature-tag">40+ Bahasa</span><span class="feature-tag">Gamifikasi</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Siapapun yang ingin belajar bahasa asing secara mandiri and konsisten with cara yang menyenangkan and tidak membosankan.</div>
+    </div>
+
+    <div class="app-card" data-cat="4" data-name="wolfram alpha sains matematika fisika kimia komputasi akurat grafik teknik" style="--cat-color:var(--c4);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/wolframalpha/DD1100" alt="Wolfram Alpha" onerror="this.parentElement.innerHTML='🧮'"></div>
+        <div class="card-title-wrap"><div class="app-name">Wolfram Alpha</div><div class="app-dev">by Wolfram Research · wolframalpha.com</div></div>
+        <div class="app-badge" style="color:#fff;">Komputasi</div>
+      </div>
+      <div class="app-desc">Wolfram Alpha adalah mesin komputasi pengetahuan berbasis AI yang mampu menjawab pertanyaan ilmiah, matematika, and teknis secara sangat akurat menggunakan data terverifikasi and algoritma komputasi nyata. Berbeda dari chatbot biasa yang hanya menghasilkan teks, Wolfram Alpha melakukan perhitungan matematis sungguhan and memberikan jawaban terstruktur lengkap with grafik interaktif, tabel perbandingan, rumus derivasi langkah demi langkah, visualisasi 3D, and penjelasan kontekstual mendalam. Sangat berguna untuk pelajar TJKT dalam mata pelajaran: fisika (mekanika, termodinamika, elektromagnetisme), kimia (stoikiometri, termokimia), matematika tingkat lanjut (kalkulus, aljabar linear, statistik), and ilmu komputer (kompleksitas algoritma, teori grafik).</div>
+      <div class="app-features"><span class="feature-tag">Komputasi Nyata</span><span class="feature-tag">Grafik Interaktif</span><span class="feature-tag">Fisika &amp; Kimia</span><span class="feature-tag">Statistik</span><span class="feature-tag">Visualisasi 3D</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Pelajar TJKT, mahasiswa teknik, guru sains, and peneliti yang butuh jawaban ilmiah with komputasi matematis presisi tinggi.</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category" id="cat-5" style="--cat-color:var(--c5);--cat-bg:rgba(6,182,212,.1);">
+  <div class="cat-header">
+    <div class="cat-icon-wrap">🎬</div>
+    <div class="cat-meta"><div class="cat-num">Kategori 05</div><div class="cat-title">Media Pembelajaran &amp; Video</div></div>
+    <div class="cat-count" style="color:var(--c5);">6 Aplikasi</div>
+  </div>
+  <div class="apps-grid">
+
+    <div class="app-card" data-cat="5" data-name="synthesia avatar video pembelajaran presenter skrip multi bahasa e-learning pelatihan" style="--cat-color:var(--c5);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/synthesia/3452FF" alt="Synthesia" onerror="this.parentElement.innerHTML='👤'"></div>
+        <div class="card-title-wrap"><div class="app-name">Synthesia</div><div class="app-dev">by Synthesia Ltd. · synthesia.io</div></div>
+        <div class="app-badge" style="color:#000;">Avatar AI</div>
+      </div>
+      <div class="app-desc">Synthesia adalah platform pembuatan video berbasis AI yang memungkinkan siapapun membuat video presenter profesional berkualitas studio tanpa memerlukan kamera, studio rekaman, atau bahkan aktor manusia sungguhan. Cara kerjanya: pengguna cukup mengetikkan skrip teks, memilih avatar AI dari lebih dari 160 pilihan karakter manusia yang sangat realistis (berbagai ras, gender, and gaya berpakaian), memilih bahasa and aksen yang diinginkan, lalu Synthesia menghasilkan video presenter yang berbicara with natural and ekspresif. Mendukung lebih dari 120 bahasa termasuk Bahasa Indonesia. Sangat merevolusi cara pembuatan konten e-learning perusahaan, video pelatihan karyawan, materi onboarding, and konten edukasi berskala besar with biaya minimal.</div>
+      <div class="app-features"><span class="feature-tag">160+ Avatar Realistis</span><span class="feature-tag">120+ Bahasa</span><span class="feature-tag">E-Learning</span><span class="feature-tag">No Kamera/Studio</span><span class="feature-tag">Video Pelatihan</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Guru, trainer perusahaan, HR, and institusi pendidikan yang ingin buat konten video edukasi profesional with biaya rendah.</div>
+    </div>
+
+    <div class="app-card" data-cat="5" data-name="heygen avatar video presenter voice clone terjemahan bahasa lip sync dubbing" style="--cat-color:var(--c5);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/heygen/FF6B35" alt="HeyGen" onerror="this.parentElement.innerHTML='🎭'"></div>
+        <div class="card-title-wrap"><div class="app-name">HeyGen</div><div class="app-dev">by HeyGen Inc. · heygen.com</div></div>
+        <div class="app-badge" style="color:#000;">Video AI</div>
+      </div>
+      <div class="app-desc">HeyGen adalah platform video AI yang dikenal luas karena fitur Video Translation-nya yang revolusioner: mampu menerjemahkan video yang sudah ada ke dalam bahasa lain manapun lengkap with sinkronisasi gerakan bibir (lip sync) yang sangat realistis — seolah-olah pembicara benar-benar berbicara dalam bahasa target. Fitur Avatar Creation memungkinkan pengguna menciptakan avatar digital mereka sendiri hanya dari rekaman video 2-5 menit, termasuk kloning suara untuk narasi yang lebih personal and autentik. Instant Avatar memungkinkan pembuatan avatar dari webcam secara real-time. Video Translate mendukung 40+ bahasa and sangat populer untuk konten edukasi multilingual and pemasaran global.</div>
+      <div class="app-features"><span class="feature-tag">Video Translate</span><span class="feature-tag">Lip Sync Realistis</span><span class="feature-tag">Voice Clone</span><span class="feature-tag">Custom Avatar</span><span class="feature-tag">40+ Bahasa</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> YouTuber, tim marketing global, and educator yang ingin materi mereka bisa diakses oleh audiens internasional.</div>
+    </div>
+
+    <div class="app-card" data-cat="5" data-name="invideo video youtube teks narasi musik otomatis konten shorts reels template" style="--cat-color:var(--c5);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/invideo/7C3AED" alt="InVideo" onerror="this.parentElement.innerHTML='📹'"></div>
+        <div class="card-title-wrap"><div class="app-name">InVideo AI</div><div class="app-dev">by InVideo Inc. · invideo.io</div></div>
+        <div class="app-badge" style="color:#000;">Konten Video</div>
+      </div>
+      <div class="app-desc">InVideo AI adalah platform pembuatan video yang mengubah teks atau topik menjadi video siap publish secara otomatis and menyeluruh. Pengguna cukup memasukkan topik, target audiens, and platform tujuan, lalu InVideo AI akan memilih klip video terbaik dari perpustakaan lebih dari 8 juta aset media stock premium, menambahkan narasi AI yang natural menggunakan text-to-speech, memilih musik latar yang sesuai mood konten, menambahkan subtitle otomatis, and mengatur transisi yang mulus — menghasilkan video siap publish dalam hitungan menit. Mendukung pembuatan video YouTube horizontal, Instagram Reels vertikal, TikTok, Facebook Ads, video iklan produk, explainer video, and konten edukasi. Tersedia 5000+ template yang bisa dikustomisasi.</div>
+      <div class="app-features"><span class="feature-tag">Text-to-Video</span><span class="feature-tag">AI Narasi Natural</span><span class="feature-tag">8M+ Stock Media</span><span class="feature-tag">5000+ Template</span><span class="feature-tag">Multi-platform</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> YouTuber pemula, tim marketing, and pelajar yang ingin membuat video presentasi atau edukasi tanpa skill editing.</div>
+    </div>
+
+    <div class="app-card" data-cat="5" data-name="elevenlabs tts text to speech suara narasi kloning podcast dubbing audiobook natural" style="--cat-color:var(--c5);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/elevenlabs.png" alt="ElevenLabs" onerror="this.parentElement.innerHTML='🔊'"></div>
+        <div class="card-title-wrap"><div class="app-name">ElevenLabs</div><div class="app-dev">by ElevenLabs Inc. · elevenlabs.io</div></div>
+        <div class="app-badge" style="color:#000;">Suara AI</div>
+      </div>
+      <div class="app-desc">ElevenLabs adalah platform text-to-speech AI terdepan di dunia yang menghasilkan suara manusia paling natural, ekspresif, and realistis yang pernah ada dalam teknologi AI. Teknologi Voice Cloning-nya mampu mereplikasi suara seseorang secara akurat hanya dari sampel audio 1 menit, lengkap with intonasi khas, emosi, ritme bicara, and karakteristik unik suara tersebut. Tersedia lebih dari 1000 pilihan suara AI dalam 29 bahasa termasuk Indonesia. Fitur AI Dubbing dapat menerjemahkan and mendubbing video ke bahasa lain with suara asli pembicara yang dipertahankan. Digunakan secara luas untuk produksi audiobook, podcast AI, narasi video dokumenter, iklan radio, and konten edukasi audio interaktif.</div>
+      <div class="app-features"><span class="feature-tag">Voice Clone 1 Menit</span><span class="feature-tag">1000+ Suara</span><span class="feature-tag">29 Bahasa</span><span class="feature-tag">AI Dubbing</span><span class="feature-tag">Audiobook Pro</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Podcaster, pembuat audiobook, kreator video, and developer aplikasi yang butuh suara AI berkualitas studio profesional.</div>
+    </div>
+
+    <div class="app-card" data-cat="5" data-name="descript edit video audio podcast teks filler overdub transkripsi studio sound" style="--cat-color:var(--c5);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://cdn.simpleicons.org/descript/A020F0" alt="Descript" onerror="this.parentElement.innerHTML='✂️'"></div>
+        <div class="card-title-wrap"><div class="app-name">Descript</div><div class="app-dev">by Descript Inc. · descript.com</div></div>
+        <div class="app-badge" style="color:#000;">Edit AI</div>
+      </div>
+      <div class="app-desc">Descript adalah editor video and podcast berbasis AI yang merevolusi cara mengedit konten audio-visual with konsep yang benar-benar baru: edit video and podcast layaknya mengedit dokumen Word. Setiap kata yang dihapus dari transkrip teks secara otomatis menghapus segmen tersebut dari video atau audio — tidak perlu mencari-cari titik waktu di timeline. Fitur AI Remove Filler Words menghapus kata-kata pengisi seperti "ehm", "uh", "hmm", and jeda tidak perlu dari rekaman secara otomatis dalam satu klik. Overdub memungkinkan pembuatan ulang kata atau kalimat yang salah diucapkan hanya with mengetik teks baru menggunakan suara asli narator yang telah dilatih. Studio Sound meningkatkan kualitas audio rekaman rumahan yang buruk menjadi sekelas rekaman di studio profesional.</div>
+      <div class="app-features"><span class="feature-tag">Edit via Transkrip</span><span class="feature-tag">Filler Word AI</span><span class="feature-tag">Overdub Suara</span><span class="feature-tag">Studio Sound</span><span class="feature-tag">Screen Record</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Podcaster, YouTuber, jurnalis video, and kreator konten yang ingin workflow editing lebih cepat, mudah, and profesional.</div>
+    </div>
+
+    <div class="app-card" data-cat="5" data-name="sora openai text to video sinematik hd video generate fisika konsistensi animasi" style="--cat-color:var(--c5);">
+      <div class="card-top">
+        <div class="app-logo"><img src="https://unpkg.com/@lobehub/icons-static-png@latest/dark/sora.png" alt="Sora" onerror="this.parentElement.innerHTML='🎥'"></div>
+        <div class="card-title-wrap"><div class="app-name">Sora (OpenAI)</div><div class="app-dev">by OpenAI · via ChatGPT Plus/Pro</div></div>
+        <div class="app-badge" style="color:#000;">Text-to-Video</div>
+      </div>
+      <div class="app-desc">Sora adalah model text-to-video revolusioner dari OpenAI yang mengubah deskripsi teks menjadi video sinematik berkualitas tinggi hingga resolusi 1080p. Yang benar-benar membedakan Sora dari generator video AI lainnya adalah kemampuannya memahami and mensimulasikan fisika dunia nyata secara konsisten — objek bergerak with inertia yang benar, cahaya and bayangan berperilaku realistis mengikuti sumber cahaya, perspektif kamera berubah secara natural seolah dioperasikan kameraman berpengalaman, and karakter mempertahankan identitas visualnya antar adegan yang berbeda. Mampu menghasilkan video hingga 60 detik dalam satu kali generate. Sora juga dapat menganimasikan gambar diam menjadi video and memperpanjang video yang sudah ada secara konsisten. Tersedia dalam paket ChatGPT Plus and Pro.</div>
+      <div class="app-features"><span class="feature-tag">Text-to-Video 1080p</span><span class="feature-tag">Fisika Realistis</span><span class="feature-tag">60 Detik</span><span class="feature-tag">Animasi Gambar</span><span class="feature-tag">ChatGPT Plus</span></div>
+      <div class="app-divider"></div>
+      <div class="app-use"><strong>Ideal untuk:</strong> Filmmaker, advertiser, kreator konten profesional, and siapa saja yang ingin wujudkan imajinasi visual tanpa peralatan produksi mahal.</div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<div class="conclusion">
+  <div class="conclusion-inner">
+    <h2>📝 Kesimpulan</h2>
+    <p>Perkembangan teknologi <strong>Kecerdasan Buatan (Artificial Intelligence)</strong> telah melahirkan berbagai aplikasi inovatif yang secara fundamental mengubah cara manusia bekerja, belajar, and berkreasi. Dari kategori <strong>Chatbot &amp; Asisten Virtual</strong>, tools seperti ChatGPT, Gemini, and Claude telah menjadi asisten pintar yang bisa diandalkan kapan saja and di mana saja. Di bidang <strong>Kreativitas &amp; Desain</strong>, Canva AI and Midjourney memungkinkan siapapun — bahkan tanpa keahlian desain — untuk menghasilkan karya visual berkualitas profesional dalam hitungan menit. Untuk <strong>Produktivitas &amp; Penulisan</strong>, Notion AI and Gamma App memangkas waktu pembuatan konten and dokumen secara drastis. Dalam konteks <strong>Edukasi</strong>, Socratic, Photomath, and Duolingo membuktikan bahwa AI bisa menjadi tutor personal 24 jam yang sabar and adaptif. Sementara di ranah <strong>Media &amp; Video</strong>, Synthesia and ElevenLabs mendemokratisasi produksi konten berkualitas studio yang dulu hanya bisa dilakukan oleh perusahaan besar berbudget tinggi. Memahami and menguasai tools AI ini bukan lagi pilihan, melainkan kompetensi esensial yang harus dimiliki oleh generasi pelajar <strong>XI TJKT 2</strong> untuk bersaing and berkontribusi di era digital yang terus berkembang with pesat.</p>
+  </div>
+</div>
+
+<div class="credit-section">
+  <div class="credit-card">
+    <div class="credit-left">
+      <div class="credit-avatar"><img src="profile.jpg" alt="Foto Profil Farid Alfiyansah" style="width:100%; height:100%; object-fit:cover; border-radius:50%;"></div>
+      <div class="credit-info">
+        <div class="credit-label">Disusun oleh</div>
+        <div class="credit-name">Farid Alfiyansah</div>
+        <div class="credit-class">XI TJKT 2 &nbsp;·&nbsp; Eksplorasi Aplikasi Berbasis AI</div>
+      </div>
+    </div>
+    <div class="credit-right">
+      <a href="https://github.com/R1dzzz" target="_blank" rel="noopener noreferrer" class="github-btn">
+        <svg role="img" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+        <div class="github-btn-text">
+          <span class="github-btn-sub">github.com</span>
+          <span class="github-btn-main">R1dzzz</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 <span>XI TJKT 2</span> | Tugas Eksplorasi Teknologi Kecerdasan Buatan</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
