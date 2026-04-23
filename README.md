@@ -8,6 +8,7 @@
 
 <p align="center">
   <strong>Katalog interaktif yang merangkum 30 aplikasi kecerdasan buatan terpopuler tahun 2026.</strong>
+  <strong>Dikembangkan oleh **Farid Alfiyansah**.</strong>
 </p>
 
 ---
