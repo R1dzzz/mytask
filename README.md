@@ -14,7 +14,7 @@
 ---
 
 ## 🌟 Tentang Proyek
-Proyek ini adalah platform web katalog yang dirancang khusus untuk memberikan edukasi mengenai ekosistem teknologi AI saat ini. Dibangun sebagai bagian dari tugas eksplorasi materi **SIJA** kelas **XI TJKT 2**, web ini menyajikan informasi mendalam mengenai aplikasi AI yang terbagi dalam kategori:
+Proyek ini adalah platform web katalog yang dirancang khusus untuk memberikan edukasi mengenai ekosistem teknologi AI saat ini. Dibangun sebagai bagian dari tugas eksplorasi materi **SIJA** kelas **XI** jurusan **TJKT**, web ini menyajikan informasi mendalam mengenai aplikasi AI yang terbagi dalam kategori:
 - 💬 **Chatbot & Asisten Virtual**
 - 🎨 **Kreativitas & Desain Grafis**
 - ✍️ **Produktivitas & Penulisan**
