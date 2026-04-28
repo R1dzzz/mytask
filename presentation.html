@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presentation — Pemanfaatan AI untuk Pembuatan Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.jpg" type="image/x-icon" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="presentation.css">
+</head>
+<body class="presentation-body">
+
+<!-- Fixed Navigation -->
+<nav class="pres-nav">
+  <a href="index.html" class="pres-nav-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+    Kembali
+  </a>
+  <div class="pres-nav-title">Presentation Mode</div>
+  <div class="pres-nav-dots">
+    <span class="pres-dot active" data-slide="0"></span>
+    <span class="pres-dot" data-slide="1"></span>
+    <span class="pres-dot" data-slide="2"></span>
+    <span class="pres-dot" data-slide="3"></span>
+    <span class="pres-dot" data-slide="4"></span>
+    <span class="pres-dot" data-slide="5"></span>
+  </div>
+</nav>
+
+<!-- Progress Bar -->
+<div class="pres-progress"><div class="pres-progress-bar" id="progressBar"></div></div>
+
+<!-- Slide Container -->
+<main class="pres-container" id="presContainer">
+
+  <!-- SLIDE 1: INTRO -->
+  <section class="pres-slide" id="slide-1" style="--slide-accent:var(--c1);">
+    <div class="pres-slide-bg">
+      <div class="pres-glow pres-glow-1"></div>
+      <div class="pres-glow pres-glow-2"></div>
+    </div>
+    <div class="pres-content">
+      <div class="pres-badge">
+        <div class="pres-badge-dot"></div>
+        <span>Tugas Eksplorasi AI</span>
+      </div>
+      <h1 class="pres-title">
+        <span class="pres-title-line">Pemanfaatan AI</span>
+        <span class="pres-title-line">untuk Pembuatan Website</span>
+      </h1>
+      <p class="pres-subtitle">Eksplorasi pemanfaatan kecerdasan buatan dalam pengembangan website modern, mulai dari perencanaan konsep hingga implementasi kode.</p>
+      <div class="pres-meta">
+        <div class="pres-meta-item">
+          <div class="pres-meta-num">XI</div>
+          <div class="pres-meta-label">TJKT 2</div>
+        </div>
+        <div class="pres-meta-divider"></div>
+        <div class="pres-meta-item">
+          <div class="pres-meta-num">2026</div>
+          <div class="pres-meta-label">Tahun Ajaran</div>
+        </div>
+      </div>
+      <div class="pres-scroll-hint">
+        <span>Scroll untuk memulai</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: AI YANG DIGUNAKAN -->
+  <section class="pres-slide" id="slide-2" style="--slide-accent:var(--c2);">
+    <div class="pres-slide-bg">
+      <div class="pres-glow pres-glow-3"></div>
+    </div>
+    <div class="pres-content">
+      <div class="pres-section-label">Tools & Teknologi</div>
+      <h2 class="pres-section-title">AI yang Digunakan</h2>
+      <p class="pres-section-desc">Dalam pengembangan project ini, kami memanfaatkan dua platform AI utama yang saling melengkapi untuk menghasilkan output optimal.</p>
+
+      <div class="pres-tools-grid">
+        <div class="pres-tool-card">
+          <div class="pres-tool-icon" style="--tool-color:#10a37f;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="pres-tool-name">ChatGPT</div>
+          <div class="pres-tool-by">by OpenAI</div>
+          <div class="pres-tool-desc">Digunakan sebagai fondasi perencanaan project. ChatGPT berperan dalam menyusun prompt engineering, menghasilkan ide-ide kreatif, merancang struktur website yang logis, menentukan alur navigasi pengguna, serta membuat deskripsi konten yang menarik dan persuasif.</div>
+          <div class="pres-tool-tags">
+            <span class="pres-tool-tag">Prompt Engineering</span>
+            <span class="pres-tool-tag">Ide & Konsep</span>
+            <span class="pres-tool-tag">Struktur Website</span>
+          </div>
+        </div>
+
+        <div class="pres-tool-card">
+          <div class="pres-tool-icon" style="--tool-color:#d97757;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="pres-tool-name">Claude AI</div>
+          <div class="pres-tool-by">by Anthropic</div>
+          <div class="pres-tool-desc">Berperan sebagai engine implementasi teknis. Claude digunakan untuk generate kode HTML semantik, CSS modern dengan styling yang responsif, dan JavaScript interaktif. Keunggulan Claude dalam memahami konteks panjang memungkinkan generasi kode yang konsisten dan terstruktur dengan baik.</div>
+          <div class="pres-tool-tags">
+            <span class="pres-tool-tag">Generate Kode</span>
+            <span class="pres-tool-tag">HTML / CSS / JS</span>
+            <span class="pres-tool-tag">Implementasi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: IDE PROJECT -->
+  <section class="pres-slide" id="slide-3" style="--slide-accent:var(--c3);">
+    <div class="pres-slide-bg">
+      <div class="pres-glow pres-glow-4"></div>
+    </div>
+    <div class="pres-content pres-content-wide">
+      <div class="pres-section-label">Studi Kasus</div>
+      <h2 class="pres-section-title">Ide Project: Website Nasi Goreng</h2>
+
+      <div class="pres-case-layout">
+        <div class="pres-case-main">
+          <div class="pres-case-card">
+            <div class="pres-case-header">
+              <div class="pres-case-icon">🍳</div>
+              <div>
+                <div class="pres-case-client">Client: Nasi Goreng Spesial "Maknyus"</div>
+                <div class="pres-case-type">Website Promosi & Penjualan</div>
+              </div>
+            </div>
+
+            <div class="pres-case-body">
+              <div class="pres-case-block">
+                <h4>Latar Belakang Kebutuhan Client</h4>
+                <p>Sebuah usaha kuliner rumahan yang bergerak di bidang nasi goreng spesial menghadapi tantangan dalam menjangkau pelanggan potensial di era digital. Usaha ini sebelumnya mengandalkan penjualan offline melalui warung tenda dan pesanan via WhatsApp pribadi, namun pertumbuhan pelanggan terhambat karena keterbatasan jangkauan pemasaran. Owner menyadari bahwa keberadaan website profesional menjadi kebutuhan urgent untuk membangun kredibilitas brand, menampilkan menu secara visual yang menarik, serta menyediakan kanal pemesanan yang terstruktur dan mudah diakses oleh pelanggan dari berbagai platform.</p>
+              </div>
+
+              <div class="pres-case-block">
+                <h4>Tujuan & Target Pengguna</h4>
+                <p>Website ini dirancang dengan tujuan utama sebagai media promosi digital yang mampu menampilkan identitas brand secara profesional sekaligus menjadi kanal penjualan langsung. Target pengguna meliputi masyarakat lokal usia 18–45 tahun yang aktif mencari kuliner online melalui media sosial dan mesin pencari, pelanggan setia yang ingin memesan secara praktis tanpa harus mengunjungi lokasi fisik, serta calon investor atau mitra bisnis yang membutuhkan informasi komprehensif mengenai perkembangan usaha.</p>
+              </div>
+
+              <div class="pres-case-block">
+                <h4>Fitur Utama Website</h4>
+                <div class="pres-feature-list">
+                  <div class="pres-fitem"><span class="pres-fitem-num">01</span><div><strong>Hero Section</strong> — Tampilan pembuka dengan visual nasi goreng premium dan tagline menarik.</div></div>
+                  <div class="pres-fitem"><span class="pres-fitem-num">02</span><div><strong>Menu Interaktif</strong> — Daftar lengkap menu dengan foto, deskripsi, harga, dan kategori.</div></div>
+                  <div class="pres-fitem"><span class="pres-fitem-num">03</span><div><strong>Form Pemesanan</strong> — Sistem order online terintegrasi dengan pilihan delivery atau pickup.</div></div>
+                  <div class="pres-fitem"><span class="pres-fitem-num">04</span><div><strong>Testimoni Pelanggan</strong> — Review dan rating untuk membangun trust calon pembeli.</div></div>
+                  <div class="pres-fitem"><span class="pres-fitem-num">05</span><div><strong>Kontak & Lokasi</strong> — Informasi lengkap dengan peta interaktif dan jam operasional.</div></div>
+                  <div class="pres-fitem"><span class="pres-fitem-num">06</span><div><strong>Responsive Design</strong> — Tampilan optimal di desktop, tablet, dan smartphone.</div></div>
+                </div>
+              </div>
+
+              <div class="pres-case-block">
+                <h4>Manfaat & Peran AI</h4>
+                <p>Dengan hadirnya website ini, usaha nasi goreng diharapkan mampu meningkatkan visibilitas brand di ruang digital, memperluas jangkauan pasar melampaui radius fisik warung, serta meningkatkan efisiensi operasional melalui sistem pemesanan terotomatisasi. Pemanfaatan AI dalam proses development secara signifikan mempercepat timeline pengerjaan dari yang biasanya memerlukan waktu berminggu-minggu menjadi hanya beberapa hari. ChatGPT berperan dalam fase perencanaan dengan menghasilkan blueprint struktur website, copywriting konten, dan strategi UX yang efektif. Selanjutnya, Claude AI mengakselerasi fase implementasi dengan menghasilkan kode berkualitas produksi yang siap deploy, sehingga client dapat segera go-live dan mulai meraup keuntungan dari kanal digital.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: CARA KERJA AI -->
+  <section class="pres-slide" id="slide-4" style="--slide-accent:var(--c4);">
+    <div class="pres-slide-bg">
+      <div class="pres-glow pres-glow-5"></div>
+    </div>
+    <div class="pres-content">
+      <div class="pres-section-label">Workflow</div>
+      <h2 class="pres-section-title">Cara Kerja AI</h2>
+      <p class="pres-section-desc">Alur kerja kolaboratif manusia dan AI dalam pengembangan website dari nol hingga siap digunakan.</p>
+
+      <div class="pres-flow">
+        <div class="pres-flow-step">
+          <div class="pres-flow-num">1</div>
+          <div class="pres-flow-card">
+            <div class="pres-flow-title">User Membuat Prompt</div>
+            <div class="pres-flow-text">User menyusun prompt detail di ChatGPT yang mencakup kebutuhan client, target audiens, fitur yang diinginkan, dan referensi desain. Semakin spesifik prompt, semakin akurat output yang dihasilkan.</div>
+          </div>
+        </div>
+
+        <div class="pres-flow-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+
+        <div class="pres-flow-step">
+          <div class="pres-flow-num">2</div>
+          <div class="pres-flow-card">
+            <div class="pres-flow-title">ChatGPT Hasilkan Ide & Struktur</div>
+            <div class="pres-flow-text">ChatGPT menganalisis prompt dan menghasilkan konsep website lengkap: wireframe struktur halaman, alur navigasi, deskripsi setiap section, tone komunikasi brand, dan rekomendasi teknologi stack.</div>
+          </div>
+        </div>
+
+        <div class="pres-flow-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+
+        <div class="pres-flow-step">
+          <div class="pres-flow-num">3</div>
+          <div class="pres-flow-card">
+            <div class="pres-flow-title">Prompt Diteruskan ke Claude</div>
+            <div class="pres-flow-text">Seluruh hasil perencanaan dari ChatGPT — termasuk struktur, deskripsi fitur, dan kebutuhan teknis — dikompilasi menjadi satu prompt komprehensif untuk Claude AI sebagai bahan generate kode.</div>
+          </div>
+        </div>
+
+        <div class="pres-flow-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+
+        <div class="pres-flow-step">
+          <div class="pres-flow-num">4</div>
+          <div class="pres-flow-card">
+            <div class="pres-flow-title">Claude Generate Kode</div>
+            <div class="pres-flow-text">Claude memproses prompt dan menghasilkan file HTML semantik, CSS modern dengan styling responsif, dan JavaScript untuk interaktivitas. Kode dihasilkan dalam bentuk modular dan terdokumentasi dengan baik.</div>
+          </div>
+        </div>
+
+        <div class="pres-flow-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+
+        <div class="pres-flow-step">
+          <div class="pres-flow-num">5</div>
+          <div class="pres-flow-card">
+            <div class="pres-flow-title">Website Siap Digunakan</div>
+            <div class="pres-flow-text">Hasil kode direview, diuji responsivitasnya, dan dideploy ke hosting. Website nasi goreng kini siap diakses publik untuk promosi dan menerima pesanan secara online.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: PREVIEW WEBSITE -->
+  <section class="pres-slide" id="slide-5" style="--slide-accent:#f59e0b;">
+    <div class="pres-slide-bg">
+      <div class="pres-glow pres-glow-6"></div>
+    </div>
+    <div class="pres-content pres-content-full">
+      <div class="pres-section-label">Live Preview</div>
+      <h2 class="pres-section-title">Preview Website Nasi Goreng</h2>
+      <p class="pres-section-desc">Simulasi tampilan website usaha nasi goreng yang telah dibangun menggunakan AI.</p>
+
+      <div class="pres-mockup-wrap">
+        <div class="pres-mockup">
+          <!-- Mockup Browser Chrome -->
+          <div class="pres-browser">
+            <div class="pres-browser-bar">
+              <div class="pres-browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="pres-browser-url">maknyus-nasigoreng.com</div>
+            </div>
+
+            <!-- Mockup Website Content -->
+            <div class="pres-website">
+              <div class="pres-web-hero">
+                <div class="pres-web-hero-overlay"></div>
+                <div class="pres-web-hero-content">
+                  <div class="pres-web-badge">🔥 Best Seller</div>
+                  <h3>Nasi Goreng Spesial Maknyus</h3>
+                  <p>Cita rasa autentik dengan bumbu rahasia turun-temurun. Dijamin bikin ketagihan!</p>
+                  <div class="pres-web-btns">
+                    <span class="pres-web-btn-primary">Pesan Sekarang</span>
+                    <span class="pres-web-btn-secondary">Lihat Menu</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pres-web-section">
+                <div class="pres-web-sec-title">Menu Favorit</div>
+                <div class="pres-web-menu">
+                  <div class="pres-web-menu-item">
+                    <div class="pres-web-menu-img">🍛</div>
+                    <div class="pres-web-menu-name">Nasi Goreng Spesial</div>
+                    <div class="pres-web-menu-price">Rp 25.000</div>
+                  </div>
+                  <div class="pres-web-menu-item">
+                    <div class="pres-web-menu-img">🍳</div>
+                    <div class="pres-web-menu-name">Nasi Goreng Seafood</div>
+                    <div class="pres-web-menu-price">Rp 32.000</div>
+                  </div>
+                  <div class="pres-web-menu-item">
+                    <div class="pres-web-menu-img">🌶️</div>
+                    <div class="pres-web-menu-name">Nasi Goreng Pedas</div>
+                    <div class="pres-web-menu-price">Rp 22.000</div>
+                  </div>
+                  <div class="pres-web-menu-item">
+                    <div class="pres-web-menu-img">🥩</div>
+                    <div class="pres-web-menu-name">Nasi Goreng Kambing</div>
+                    <div class="pres-web-menu-price">Rp 35.000</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pres-web-section pres-web-section-dark">
+                <div class="pres-web-sec-title">Kenapa Memilih Kami?</div>
+                <div class="pres-web-features">
+                  <div class="pres-web-feat">
+                    <div class="pres-web-feat-icon">⚡</div>
+                    <div class="pres-web-feat-title">Pesan Cepat</div>
+                    <div class="pres-web-feat-desc">Pesanan diproses dalam 15 menit</div>
+                  </div>
+                  <div class="pres-web-feat">
+                    <div class="pres-web-feat-icon">🌿</div>
+                    <div class="pres-web-feat-title">Bahan Fresh</div>
+                    <div class="pres-web-feat-desc">Sayur & protein selalu segar harian</div>
+                  </div>
+                  <div class="pres-web-feat">
+                    <div class="pres-web-feat-icon">🛵</div>
+                    <div class="pres-web-feat-title">Delivery</div>
+                    <div class="pres-web-feat-desc">Gratis ongkir radius 3 km</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pres-web-footer">
+                <div class="pres-web-footer-brand">Maknyus</div>
+                <div class="pres-web-footer-contact">📍 Jl. Merdeka No. 123 · 📞 0812-3456-7890</div>
+                <div class="pres-web-footer-copy">© 2026 Nasi Goreng Maknyus. All rights reserved.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: ANGGOTA KELOMPOK -->
+  <section class="pres-slide" id="slide-6" style="--slide-accent:var(--c5);">
+    <div class="pres-slide-bg">
+      <div class="pres-glow pres-glow-7"></div>
+    </div>
+    <div class="pres-content">
+      <div class="pres-section-label">Tim Kami</div>
+      <h2 class="pres-section-title">Anggota Kelompok</h2>
+      <p class="pres-section-desc">Project ini disusun secara kolaboratif oleh tim beranggotakan lima orang dengan pembagian tugas yang terstruktur.</p>
+
+      <div class="pres-team-grid">
+        <div class="pres-team-card">
+          <div class="pres-team-avatar" style="--team-color:var(--c1);">H</div>
+          <div class="pres-team-info">
+            <div class="pres-team-name">Halim</div>
+            <div class="pres-team-num">Absen 31</div>
+            <div class="pres-team-role">Project Lead & Prompt Engineer</div>
+          </div>
+        </div>
+
+        <div class="pres-team-card">
+          <div class="pres-team-avatar" style="--team-color:var(--c2);">FA</div>
+          <div class="pres-team-info">
+            <div class="pres-team-name">Farid Alfiyansah</div>
+            <div class="pres-team-num">Absen 26</div>
+            <div class="pres-team-role">Frontend Developer & UI Designer</div>
+          </div>
+        </div>
+
+        <div class="pres-team-card">
+          <div class="pres-team-avatar" style="--team-color:var(--c3);">DB</div>
+          <div class="pres-team-info">
+            <div class="pres-team-name">Devino Bintang Y</div>
+            <div class="pres-team-num">Absen 5</div>
+            <div class="pres-team-role">Content Writer & Researcher</div>
+          </div>
+        </div>
+
+        <div class="pres-team-card">
+          <div class="pres-team-avatar" style="--team-color:var(--c4);">FY</div>
+          <div class="pres-team-info">
+            <div class="pres-team-name">Fauzan Yusuf P</div>
+            <div class="pres-team-num">Absen 27</div>
+            <div class="pres-team-role">Code Reviewer & Debugger</div>
+          </div>
+        </div>
+
+        <div class="pres-team-card">
+          <div class="pres-team-avatar" style="--team-color:var(--c5);">DA</div>
+          <div class="pres-team-info">
+            <div class="pres-team-name">Denis Alfarizi</div>
+            <div class="pres-team-num">Absen 4</div>
+            <div class="pres-team-role">Documentation & QA Tester</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pres-closing">
+        <div class="pres-closing-line"></div>
+        <p>Terima kasih telah menyaksikan presentasi kami.</p>
+        <a href="index.html" class="pres-closing-btn">Kembali ke Aplikasi AI</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="presentation.js"></script>
+</body>
+</html>

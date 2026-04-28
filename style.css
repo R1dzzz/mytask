@@ -159,3 +159,29 @@ footer span{color:var(--c1);}
   border-bottom-color: var(--white);
 }
 
+
+/* NAV PRESENTATION LINK */
+.nav-pres {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:linear-gradient(135deg, var(--c1), var(--c5));
+  color:#fff;
+  font-family:'Outfit',sans-serif;
+  font-size:12px;
+  font-weight:700;
+  text-decoration:none;
+  padding:7px 16px;
+  border-radius:99px;
+  transition:all .25s;
+  white-space:nowrap;
+  box-shadow:0 0 14px -4px var(--c1);
+}
+.nav-pres:hover {
+  transform:translateY(-1px);
+  box-shadow:0 6px 20px -4px var(--c1);
+  filter:brightness(1.1);
+}
+@media(max-width:700px){
+  .nav-pres{margin-top:8px;}
+}
