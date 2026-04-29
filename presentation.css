@@ -2,6 +2,11 @@
    PRESENTATION MODE — XI TJKT 2
    ============================================ */
 
+/* Light theme override untuk presentation page */
+body.light-theme .pres-container {
+  background: var(--bg);
+}
+
 .presentation-body {
   overflow: hidden;
   height: 100vh;
@@ -12,6 +17,8 @@
 .pres-container {
   height: 100vh;
   overflow-y: scroll;
+  /* FIX: tambah overflow-x hidden agar glow element tidak menyebabkan horizontal scroll */
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
@@ -39,6 +46,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
+  /* FIX: overflow:hidden wajib agar glow (600–800px) tidak meluap ke samping */
   overflow: hidden;
 }
 
@@ -70,7 +78,8 @@
 .pres-glow-4 {
   width: 800px; height: 800px;
   background: var(--c3);
-  top: 20%; right: -20%;
+  /* FIX: ganti right:-20% → right:-5% agar tidak menyebabkan overflow horizontal */
+  top: 20%; right: -5%;
   opacity: 0.08;
 }
 .pres-glow-5 {
@@ -105,6 +114,23 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+body.light-theme .pres-nav {
+  background: rgba(240,242,248,0.92);
+}
+
+/* Theme toggle khusus untuk presentation nav (ukuran sedikit lebih kecil) */
+.pres-nav .theme-toggle {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+body.light-theme .pres-nav .theme-toggle {
+  background: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.12);
+  color: var(--white);
 }
 
 .pres-nav-back {
@@ -988,4 +1014,105 @@
   .pres-tool-card {
     padding: 20px;
   }
+}
+
+/* ============================================================
+   LIGHT THEME — PRESENTATION FIX
+   Semua override untuk mode terang
+   ============================================================ */
+
+/* Slide background jadi putih/abu di light mode */
+body.light-theme .pres-slide {
+  background: var(--bg);
+}
+
+/* Section titles yang pakai var(--white) → ok karena var sudah di-override */
+/* Hardcoded color: #94a3b8 → terlalu terang di light, ganti ke abu gelap */
+body.light-theme .pres-tool-desc,
+body.light-theme .pres-case-block p,
+body.light-theme .pres-flow-text,
+body.light-theme .pres-team-role {
+  color: #64748b;
+}
+
+/* Tool icon background di light mode */
+body.light-theme .pres-tool-icon {
+  background: rgba(0,0,0,0.05);
+}
+
+/* Tool tag di light mode */
+body.light-theme .pres-tool-tag {
+  background: rgba(0,0,0,0.05);
+}
+
+/* Feature item background */
+body.light-theme .pres-fitem {
+  background: rgba(0,0,0,0.03);
+}
+
+/* Flow card */
+body.light-theme .pres-flow-card {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Browser mockup — biarkan dark agar tetap terlihat sebagai "window" */
+body.light-theme .pres-browser {
+  box-shadow: 0 12px 40px -12px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+/* Scrollbar di light mode */
+body.light-theme .pres-case-body::-webkit-scrollbar-thumb {
+  background: #c7c7d8;
+}
+
+/* Team card shadow */
+body.light-theme .pres-team-card {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ============================================================
+   LIGHT THEME — SLIDE 1 TEXT FIX
+   Semua elemen slide pertama yang teksnya tidak terlihat
+   ============================================================ */
+
+/* Judul utama: gradient putih → tidak keliatan. Ganti ke gelap */
+body.light-theme .pres-title-line {
+  background: linear-gradient(135deg, #1e1b4b 0%, #7c3aed 50%, #0891b2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle: var(--muted) di light = #9ca3af → terlalu pudar */
+body.light-theme .pres-subtitle {
+  color: #4b5563;
+}
+
+/* Meta number (XI, 2026): gradient putih → tidak keliatan */
+body.light-theme .pres-meta-num {
+  background: linear-gradient(135deg, #1e1b4b, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Meta label (TJKT 2, Tahun Ajaran) */
+body.light-theme .pres-meta-label {
+  color: #6b7280;
+}
+
+/* Divider garis di antara meta item */
+body.light-theme .pres-meta-divider {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Badge "Tugas Eksplorasi AI" — teks #a78bfa cukup kontras, tapi badge border bisa lebih jelas */
+body.light-theme .pres-badge {
+  background: rgba(124, 58, 237, 0.10);
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+/* Scroll hint teks */
+body.light-theme .pres-scroll-hint {
+  color: #6b7280;
 }

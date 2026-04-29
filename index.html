@@ -20,7 +20,13 @@
     <button class="nav-tab" style="--ac:var(--c4)" onclick="filterCat('4',this)">📚 Edukasi</button>
     <button class="nav-tab" style="--ac:var(--c5)" onclick="filterCat('5',this)">🎬 Media</button>
   </div>
-  <a href="presentation.html" class="nav-pres">📊 Presentation</a>
+  <div class="nav-right">
+    <a href="presentation.html" class="nav-pres">📊 Presentation</a>
+    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+      <span class="icon-dark">🌙</span>
+      <span class="icon-light">☀️</span>
+    </button>
+  </div>
 </nav>
 
 <section class="hero">
@@ -503,5 +509,6 @@
 
 
 <script src="script.js"></script>
+<script src="theme.js"></script>
 </body>
 </html>
